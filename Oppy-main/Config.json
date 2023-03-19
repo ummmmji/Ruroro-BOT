@@ -1,13 +1,13 @@
 {
-    "api_key": "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",
+    "api_key": "API KEY HERE",
     "target_channels": 
     [
-        1086636205606703214,
-        603543547626651669,
-        1086639717593911296
+        channels ID HERE
+        
+       
     ],
     "delim": "，。、：！？；（）「」,.\n",
-    "discord_token": "MTA4NjYzNDk5NjkxMzE1MjA0NA.GYf3Mh.5Mrair6ENZZITEaeSvLNeYlfJxbPjlBh22nOd4",
+    "discord_token": "BOT TOKEN HERE",
     "emoji_pending": "<Error404:893122482201047110>",
     "emoji_done": "<Error404:893122482201047110>",
     "message_reset": "已重置洛洛的歷史訊息", 
