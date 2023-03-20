@@ -1,9 +1,10 @@
 # Ruroro-BOT
 Ruroro Chat GPT Discord BOT
 
-1. `git clone https://github.com/ummmmji/Ruroro-BOT.git`
-2. 複製 `config_example.json` 為 `config.json` 並編輯 `config.json` 的設定值
-3. 執行 `docker compose up -d` 啟動機器人
+1. 複製 Repo `git clone https://github.com/ummmmji/Ruroro-BOT.git`
+2. 切換到目錄內 `cd Ruroro-BOT`
+3. 複製 `config_example.json` 為 `config.json` 並編輯 `config.json` 的設定值
+4. 執行 `docker compose up -d` 啟動機器人
 
 ## 設定檔說明
 
