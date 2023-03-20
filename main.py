@@ -129,6 +129,9 @@ class OppyBot(discord.Client):
 
         if message.author == self.user:
             return True
+        
+        if message.author.bot:
+            return True
 
         msg = message.content.lower()
         for prefix in self.command_prefix:
@@ -148,13 +151,10 @@ class OppyBot(discord.Client):
             self.turns[message.channel.id] = 0
             await message.channel.send(self.message_reset)
             return True
-
-        # Skip Other Commands
-        if msg.startswith(self.prefix):
-            return True
-
-        # Skip Server Emoji
-        if msg.startswith("<") and msg.endswith(">"):
+        
+        # Only execute response with mention
+        msg = msg.replace("<@!", "<@")
+        if not msg.startswith(f'<@{self.user.id}>'):
             return True
 
         if self.IsUsing(message.channel.id):
@@ -197,7 +197,7 @@ class OppyBot(discord.Client):
         # Iteration of Each Response
         msg: Message = await message.channel.send(self.message_waiting)
         collect_msg = list()
-        for resp in self.chatbot[message.channel.id].ask(message.content):
+        for resp in self.chatbot[message.channel.id].ask(message.content.replace(f'<@{self.user.id}>', "").strip(' ')):
             collect_msg.append(resp)
             resp_msg = self.ProcessMessage(collect_msg)
             if self.EndsWithDelim(resp_msg):
@@ -296,7 +296,7 @@ def InitLogger(log_path):
 
 def Main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("Config")
+    parser.add_argument("--Config", default="config.json")
     parser.add_argument("--LogFile", default="Logs/Oppy.log")
     args: Args = parser.parse_args()
     InitLogger(args.LogFile)
