@@ -1,10 +1,9 @@
 # Ruroro-BOT
 Ruroro Chat GPT Discord BOT
 
-1. 安裝相關套件：
-    + `pip install -r requirements.txt`
-2. 執行 `OppyBot.py` 啟動機器人：
-    + e.g. `python OppyBot.py Config.json`
+1. `git clone https://github.com/ummmmji/Ruroro-BOT.git`
+2. 複製 `config_example.json` 為 `config.json` 並編輯 `config.json` 的設定值
+3. 執行 `docker compose up -d` 啟動機器人
 
 ## 設定檔說明
 
