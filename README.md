@@ -13,6 +13,7 @@ Ruroro Chat GPT Discord BOT
 + `target_channels` 設定接收聊天訊息的頻道。
 + `command_prefix` 設定相關指令的前綴。
 + `converter_type` 簡繁轉換的種類，請參考 [OpenCC](https://github.com/BYVoid/OpenCC) 專案。
+(在sys_prompt內設定成"使用繁中回答，也許就不用opencc了")
 + `delim` 遇到哪些標點符號時會更新訊息。
 + `emoji_done` 當完成訊息回覆時，要加上的表情符號反應。
 + `emoji_pending` 當訊息正在回覆時，要加上的表情符號反應。
